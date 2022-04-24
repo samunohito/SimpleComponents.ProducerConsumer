@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleComponents.ProducerConsumer", "SimpleComponents.ProducerConsumer\SimpleComponents.ProducerConsumer.csproj", "{209BB991-99C7-403C-836B-88386CEACC0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleComponents.ProducerConsumer.Test", "SimpleComponents.ProducerConsumer.Test\SimpleComponents.ProducerConsumer.Test.csproj", "{FAF8F7B0-2399-4F70-BDC0-2307FB2AF6A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{209BB991-99C7-403C-836B-88386CEACC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{209BB991-99C7-403C-836B-88386CEACC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{209BB991-99C7-403C-836B-88386CEACC0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF8F7B0-2399-4F70-BDC0-2307FB2AF6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF8F7B0-2399-4F70-BDC0-2307FB2AF6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF8F7B0-2399-4F70-BDC0-2307FB2AF6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF8F7B0-2399-4F70-BDC0-2307FB2AF6A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
