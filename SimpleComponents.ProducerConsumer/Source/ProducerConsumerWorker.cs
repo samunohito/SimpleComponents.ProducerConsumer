@@ -283,9 +283,16 @@ namespace SimpleComponents.ProducerConsumer
                     {
                         _loopTask.Wait();
                     }
-                    catch (TaskCanceledException)
+                    catch (AggregateException ex)
                     {
-                        // nop
+                        if (ex.InnerException is TaskCanceledException)
+                        {
+                            // nop
+                        }
+                        else
+                        {
+                            throw;
+                        }
                     }
                     break;
             }
