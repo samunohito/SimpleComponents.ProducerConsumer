@@ -279,7 +279,14 @@ namespace SimpleComponents.ProducerConsumer
                 case TaskStatus.RanToCompletion:
                     break;
                 default:
-                    _loopTask.Wait();
+                    try
+                    {
+                        _loopTask.Wait();
+                    }
+                    catch (TaskCanceledException ex)
+                    {
+                        // nop
+                    }
                     break;
             }
 
