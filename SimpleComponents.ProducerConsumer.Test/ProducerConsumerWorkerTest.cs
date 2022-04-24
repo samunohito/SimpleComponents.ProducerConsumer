@@ -156,8 +156,6 @@ namespace SimpleComponents.ProducerConsumer.Test
         [Test]
         public void Test6()
         {
-            var item = ProducerConsumerWorkerItem.Create(x => { });
-
             var errorCount = 0;
             var cancelCount = 0;
 
@@ -169,7 +167,6 @@ namespace SimpleComponents.ProducerConsumer.Test
             Assert.AreEqual(0, errorCount);
             Assert.AreEqual(0, cancelCount);
 
-            _worker.Push(item);
             _worker.Dispose();
 
             Assert.True(_worker.IsDisposed);
