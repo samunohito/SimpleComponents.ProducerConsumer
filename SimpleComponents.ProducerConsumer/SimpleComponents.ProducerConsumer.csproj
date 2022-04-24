@@ -7,10 +7,29 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <None Include="..\icons\book_128.png" Pack="true" PackagePath="" />
+        <None Include="..\README.md" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <ItemGroup>
       <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.86-alpha">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
     </ItemGroup>
+
+    <PropertyGroup>
+        <Title>SimpleComponents.ProducerConsumer</Title>
+        <RepositoryUrl>https://github.com/samunohito/SimpleComponents.ProducerConsumer</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <Description>Tools for more convenient use of IDisposable interface.</Description>
+        <Authors>samunohito</Authors>
+        <Copyright>Copyright (c) 2022 samunohito</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageIcon>book_128.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageTags>producer, consumer, queue, worker</PackageTags>
+    </PropertyGroup>
+
 
 </Project>
