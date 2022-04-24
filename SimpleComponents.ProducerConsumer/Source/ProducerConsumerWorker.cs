@@ -283,7 +283,7 @@ namespace SimpleComponents.ProducerConsumer
                     {
                         _loopTask.Wait();
                     }
-                    catch (TaskCanceledException ex)
+                    catch (TaskCanceledException)
                     {
                         // nop
                     }
