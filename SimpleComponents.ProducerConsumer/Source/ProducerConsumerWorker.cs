@@ -49,7 +49,7 @@ namespace SimpleComponents.ProducerConsumer
             _gate = new object();
             _items = new BlockingCollection<ProducerConsumerWorkerItem>(capacity);
             _cancellation = new CancellationTokenSource();
-            _loopTask = new Task(DoProcess, _cancellation.Token);
+            _loopTask = new Task(DoProcess);
             _loopTask.Start();
         }
 
@@ -279,21 +279,7 @@ namespace SimpleComponents.ProducerConsumer
                 case TaskStatus.RanToCompletion:
                     break;
                 default:
-                    try
-                    {
-                        _loopTask.Wait();
-                    }
-                    catch (AggregateException ex)
-                    {
-                        if (ex.InnerException is TaskCanceledException)
-                        {
-                            // nop
-                        }
-                        else
-                        {
-                            throw;
-                        }
-                    }
+                    _loopTask.Wait();
                     break;
             }
 
